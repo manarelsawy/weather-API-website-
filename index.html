@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- & font Awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ? Bootstrap -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <!-- * style Sheet -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <!-- * navbar Sec -->
+    <nav id="nav" class="navbar w-100 position-fixed top-0  z-4 navbar-expand-lg bg-sec-color p-3"> 
+        <div class="container w-90">
+            <img class="m-2" src="./img/logo@2x.png" width="64" height="38" alt="">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand logo fw-bold text-white" href="#">Weather</a>
+          <span class="text-white ">tagline goes here</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active position-relative text-white" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="">Live Camers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="">Contact</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    <!-- * end  -->
+    <!--* manin continer -->
+    <div class="main">
+        <div class="container px-3 py-5 text-white">
+            <!-- * Serch -->
+            <form class="find-location bg-main-color">
+                <input class="findd w-100  rounded-5 py-3 px-4 bg-main-color mb-5 text-white " type="text" placeholder="Find your location..." id="search">
+                <button type="button" class="btn btn-primary  rounded-5 pe-auto">Find</button>
+            </form>
+            
+            <div class="row g-0">
+                <!-- * Today data -->
+                <div class="item col-md-4 bg-sec-color m-0 rounded-start-4">
+                    <div class="d-flex justify-content-between py-2 px-3 bg-main-color rounded-start" id="todaydata">
+                        <p id="todaydata-dayname" class="my-auto text-color">Sunday</p>
+                        <span>
+                            <span id="todaydata-daynumber" class="my-auto text-color">30</span>
+                            <span id="todaydata-month" class="my-auto text-color">May</span>
+                        </span>
+                    </div>
+                    <div class="item-content text-start px-3 py-3 " id="today"> 
+                        <p id="today-location" class="fs-1">Assuit</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-1 fw-bolder ">
+                                <span id="todaytemp ">20</span>
+                                <span><sup>o</sup>C </span>
+                                <img id="today-condition-img" src="./img/113 (1).png" alt="">
+                            </span>
+                        </div>
+                        <p id="today-condition-text" class="fs-6 text-light-blue">Sunny</p>
+
+                    </div>
+                    <div class="item-footer d-flex text-light p-3">
+                        <div class="d-flex me-3">
+                            <img class="footer-icons me-2" src="./img/icon-umberella.png" alt="">
+                            <p class="text-color" id="humidity">20</p>
+                        </div>
+                        <div class="d-flex me-3">
+                            <img class="footer-icons mx-2" src="./img/icon-wind.png" alt="">
+                            <p class="text-color" id="wind">30 km/h</p>
+                        </div>
+                        <div class="d-flex">
+                            <img class="footer-icons mx-2" src="./img/icon-compass.png" alt="">
+                            <p class="text-color" id="wind-direction">NNE</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- * Tomorrow data -->
+                <div class="item col-md-4 m-0 bg-main-color">
+                    <div class="py-2 text-center bg-sec-color " id="tomorrowdata">
+                        <p class="next-day-name my-auto text-color">Friday</p>
+                    </div>
+                    <div class="item-content text-light text-start p-3 text-center pt-5" id="tomorrow">
+                        <img class="next-condition-img" src="./img/113.png" alt="">
+                        <h3>
+                            <span class="next-max-temp"></span>
+                            <span> 27.7<sup>o</sup>C</span>
+                        </h3>
+                        <h5 class="">
+                            <span class="next-main-temp text-color">15</span>
+                            <span class="text-color"><sup>o</sup>C</span>
+                        </h5>
+                        <p class="next-condition-text fs-6 text-light-blue">partly cloudy</p>
+                    </div>
+                </div>
+                <!-- * After Tomorrow data -->
+                <div class="item col-md-4 m-0 bg-sec-color  rounded-end-4">
+                    <div class="py-2 text-center px-3 bg-main-color  rounded-end">
+                        <p class="my-auto text-color">Friday</p>
+                    </div>
+                    <div class="item-content text-start text-light p-3 text-center pt-5">
+                        <img class="next-condition-img" src="./img/113.png" alt="">
+                        <h3>
+                            <span class="next-max-temp"></span>
+                            <span>28.8<sup>o</sup>C</span>
+                        </h3>
+                        <h5 class="">
+                            <span class="next-min-temp text-color">15</span>
+                            <span class="text-color"><sup>o</sup>C</span>
+                        </h5>
+                        <p class="next-condition-text fs-6 text-light-blue ">partly cloudy</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- * footer -->
+<div class="footer bg-sec-color ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 position-relative">
+                <form action="#" class="subscribe-form position-relative">
+                    <input class="w-100 rounded-5 py-3 px-4 bg-sec-color  position-relative" type="text" placeholder="Enter your email to subscribe...">
+                    <button type="button" class="btn btn-primary  rounded-5 pe-auto">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-md-3  d-flex  justify-content-center  align-items-center gap-2">
+                <div class="icon d-flex justify-content-center align-content-center align-items-center">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="icon d-flex justify-content-center align-content-center align-items-center">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="icon d-flex justify-content-center align-content-center align-items-center">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <div class="icon d-flex justify-content-center align-content-center align-items-center">
+                    <i class="fa-brands fa-pinterest-p" ></i>
+                </div>
+            </div>
+            <p class="colophon text-color p-lg-3 text-color">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+        </div>
+    </div>
+    
+    <!-- : Js Fils -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
